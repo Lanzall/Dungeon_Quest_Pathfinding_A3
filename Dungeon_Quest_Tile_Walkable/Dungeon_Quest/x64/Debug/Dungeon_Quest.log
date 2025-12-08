@@ -1,0 +1,14 @@
+﻿  DungeonGame.cpp
+C:\Users\bvotano\Downloads\Dungeon_Quest_Tile_Walk\Dungeon_Quest\DungeonGame.cpp(51,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\bvotano\Downloads\Dungeon_Quest_Tile_Walk\Dungeon_Quest\DungeonGame.cpp(51,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\bvotano\Downloads\Dungeon_Quest_Tile_Walk\Dungeon_Quest\DungeonGame.cpp(52,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\bvotano\Downloads\Dungeon_Quest_Tile_Walk\Dungeon_Quest\DungeonGame.cpp(52,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameCharacter.cpp
+  JMC_SDLStarter.cpp
+C:\Users\bvotano\Downloads\Dungeon_Quest_Tile_Walk\Dungeon_Quest\JMC_SDLStarter.cpp(96,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  MoveResult.cpp
+  Player.cpp
+C:\Users\bvotano\Downloads\Dungeon_Quest_Tile_Walk\Dungeon_Quest\Player.cpp(26,23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\bvotano\Downloads\Dungeon_Quest_Tile_Walk\Dungeon_Quest\Player.cpp(27,23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  Dungeon_Quest.vcxproj -> C:\Users\bvotano\Downloads\Dungeon_Quest_Tile_Walk\Dungeon_Quest\x64\Debug\Dungeon_Quest.exe
