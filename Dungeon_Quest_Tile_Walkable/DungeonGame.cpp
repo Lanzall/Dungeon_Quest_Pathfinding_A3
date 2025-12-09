@@ -9,6 +9,7 @@ DungeonGame::DungeonGame(float tileSizeX, float tileSizeY)
 DungeonGame::~DungeonGame()
 {
 	delete this->Hero;
+	delete this->Boss;		//called when this function closes, prevents memory leaks
 }
 
 void DungeonGame::Update(float DeltaTime)
@@ -22,6 +23,13 @@ void DungeonGame::LoadTextures(SDL_Renderer* renderer)
 	this->Hero->Texture = IMG_LoadTexture(renderer, path_Hero.c_str());
 	this->Hero->Rect.w = tileSizeX;
 	this->Hero->Rect.h = tileSizeY;
+
+	this->Boss = new Minotaur;
+	//Loading the Minotaur texture (It just has it on hand, knows it exists)
+	this->Boss->Texture = IMG_LoadTexture(renderer, path_Boss.c_str());		//c string converts string path to be able to load it
+	this->Boss->Rect.w = tileSizeX;
+	this->Boss->Rect.h = tileSizeY;
+
 	for (int i = 0; i <2; i++) 
 	{
 		this->CarpetTextures[i] = IMG_LoadTexture(renderer, path_Tiles[i].c_str()); //there is some kind of problem here that needs to be fixed
@@ -38,6 +46,7 @@ void DungeonGame::LoadRoom(const char* file)// parse the BMP file into here - su
 	SDL_Color col;
 	SDL_Color Wall = { 0,0,0,255 }; // Unwalkable tile
 	this->Hero->StartLocation();
+	this->Boss->StartLocation();
 
 	for (int y = 0; y <RoomSize && y < surface->h; y++) 
 	{

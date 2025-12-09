@@ -29,6 +29,6 @@ void Player::Setlocation()
 
 void Player::StartLocation()
 {
-	CoordinateX = 5;
-	CoordinateY = 5;
+	CoordinateX = 8;
+	CoordinateY = 1;
 }

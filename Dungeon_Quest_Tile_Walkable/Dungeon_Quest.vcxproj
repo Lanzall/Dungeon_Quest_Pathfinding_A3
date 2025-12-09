@@ -135,6 +135,7 @@
     <ClCompile Include="DungeonGame.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="JMC_SDLStarter.cpp" />
+    <ClCompile Include="Minotaur.cpp" />
     <ClCompile Include="MoveResult.cpp" />
     <ClCompile Include="Pickup.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="DungeonGame.h" />
     <ClInclude Include="Enums.h" />
     <ClInclude Include="GameCharacter.h" />
+    <ClInclude Include="Minotaur.h" />
     <ClInclude Include="MoveResult.h" />
     <ClInclude Include="Pickup.h" />
     <ClInclude Include="Player.h" />

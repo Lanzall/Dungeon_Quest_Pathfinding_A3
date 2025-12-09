@@ -95,6 +95,7 @@ SDL_AppResult SDL_AppIterate(void* appstate)
     double deltaTime = (double)((now - last) / (double)SDL_GetPerformanceFrequency());
     Game->Update(deltaTime);
     Game->Hero->Setlocation();
+    Game->Boss->SetLocation();
 
     /* as you can see from this, rendering draws over whatever was drawn before it. */
     SDL_SetRenderDrawColor(renderer, 33, 33, 33, SDL_ALPHA_OPAQUE);  /* dark gray, full alpha */
@@ -112,6 +113,8 @@ SDL_AppResult SDL_AppIterate(void* appstate)
     }
     SDL_RenderTexture(renderer, Game->Hero->Texture, NULL, &Game->Hero->Rect);
     // should fetch every single game object and render them depending on sprite
+
+    SDL_RenderTexture(renderer, Game->Boss->Texture, NULL, &Game->Boss->Rect);      //This is what renders the sprite
 
     SDL_RenderPresent(renderer);  /* put it all on the screen! */
 

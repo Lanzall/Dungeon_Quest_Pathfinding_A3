@@ -4,9 +4,11 @@
 #include <SDL3_image/SDL_image.h>
 #include "GameCharacter.h"
 #include "Player.h"
+#include "Minotaur.h"
 #include "Tile.h"
 
 const static std::string path_Hero = "Textures/Hero_sword.png";
+const static std::string path_Boss = "Textures/Minotaur.png";
 const static std::string path_Tiles[] = {
 	"Textures/Tile_carpet_base.bmp", 
 	"Textures/Tile_carpet_blood_1.bmp", 
@@ -23,6 +25,7 @@ public:
 	void Update(float DeltaTime);
 	void LoadTextures(SDL_Renderer* renderer);
 	Player* Hero;
+	Minotaur* Boss;
 	void LoadRoom(const char* file);
 	void MovePlayer(Direction dir);
 
