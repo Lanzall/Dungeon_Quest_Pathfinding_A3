@@ -1,4 +1,20 @@
-﻿  JMC_SDLStarter.cpp
+﻿  DungeonGame.cpp
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(60,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(60,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(61,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(61,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameCharacter.cpp
+  JMC_SDLStarter.cpp
 C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\JMC_SDLStarter.cpp(96,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  LINK : C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\x64\Debug\Dungeon_Quest.exe not found or not built by the last incremental link; performing full link
+  Minotaur.cpp
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\Minotaur.cpp(5,23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\Minotaur.cpp(6,23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  MoveResult.cpp
+  Player.cpp
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\Player.cpp(26,23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\Player.cpp(27,23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Tile.cpp
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\Tile.cpp(47,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\Tile.cpp(48,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
   Dungeon_Quest.vcxproj -> C:\Users\bscard1\Workspace\AGA307\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\x64\Debug\Dungeon_Quest.exe

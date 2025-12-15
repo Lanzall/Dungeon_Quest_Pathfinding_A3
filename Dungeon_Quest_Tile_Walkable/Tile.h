@@ -12,5 +12,22 @@ public:
 	int TileTrackerY;
 	void SetCoordinate(float Tilex, float Tiley);
 	void GetNeighbour(float current, float dir);
+
+	/*struct Node		//Defining the Node Structure within the grid system (HOW DO I DO THIS?)
+	* I want to be able to define the node structure to represent each point on the grid
+	* Should contain coordinates, cost variables, a way to track its parent node for path reconstruction
+	{
+		int y;
+		int x;
+		int parentX;
+		int parentY;
+		float gCost;
+		float hCost;
+		float fCost;
+	};*/
+
+	//Need to initialize two lists to manage nodes:
+	//Open List - Storing nodes that are potential candiates to be explored. std:set or std:priority_queue are efficient for finding node with lowest fCost
+	//Closed List - Stores nodes that have already been fully explored to prevent redundant processing
 };
 
