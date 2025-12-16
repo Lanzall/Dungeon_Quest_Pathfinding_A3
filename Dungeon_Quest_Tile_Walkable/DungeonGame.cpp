@@ -21,12 +21,14 @@ void DungeonGame::LoadTextures(SDL_Renderer* renderer)
 	this->Hero = new Player;
 	//Load all textures
 	this->Hero->Texture = IMG_LoadTexture(renderer, path_Hero.c_str());
+	SDL_SetTextureScaleMode(this->Hero->Texture, SDL_SCALEMODE_NEAREST);		//Point filtering like Blender, makes the pixels appear sharp as intended
 	this->Hero->Rect.w = tileSizeX;
 	this->Hero->Rect.h = tileSizeY;
 
 	this->Boss = new Minotaur;
 	//Loading the Minotaur texture (It just has it on hand, knows it exists)
 	this->Boss->Texture = IMG_LoadTexture(renderer, path_Boss.c_str());		//c string converts string path to be able to load it
+	SDL_SetTextureScaleMode(this->Boss->Texture, SDL_SCALEMODE_NEAREST);	//Boss Sprite scalemode is set to nearest, makes the sprite appear crisp and not blurred
 	this->Boss->Rect.w = tileSizeX;
 	this->Boss->Rect.h = tileSizeY;
 
@@ -35,6 +37,7 @@ void DungeonGame::LoadTextures(SDL_Renderer* renderer)
 		this->CarpetTextures[i] = IMG_LoadTexture(renderer, path_Tiles[i].c_str()); //there is some kind of problem here that needs to be fixed
 		SDL_ScaleMode scaleMode = SDL_SCALEMODE_NEAREST;
 		SDL_GetTextureScaleMode(this->CarpetTextures[i], &scaleMode);
+		SDL_SetTextureScaleMode(this->CarpetTextures[i], SDL_SCALEMODE_NEAREST);		//Realised that the floor and the hero weren't actually set to scalemode_nearest, fixed this
 	}
 }
 
