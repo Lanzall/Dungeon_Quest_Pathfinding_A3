@@ -32,3 +32,5 @@ void Player::StartLocation()
 	CoordinateX = 8;
 	CoordinateY = 1;
 }
+
+//Write a script to print the Players coordinates to the terminal.

@@ -43,7 +43,6 @@ void Tile::Configure(SDL_Color& color, float x, float y, float size, SDL_Texture
 void Tile::SetCoordinate(float Tilex, float Tiley)
 {
 	//std::cout << "tile at position (" << Tilex << "," << Tiley << ") <<std::endl";
-	this->TileTrackerX;
 	this->TileTrackerY = Tiley;
 	this->TileTrackerX = Tilex;
 }

@@ -17,10 +17,6 @@ public:
 	* I want to be able to define the node structure to represent each point on the grid
 	* Should contain coordinates, cost variables, a way to track its parent node for path reconstruction
 	{
-		int y;
-		int x;
-		int parentX;
-		int parentY;
 		float gCost;
 		float hCost;
 		float fCost;
@@ -29,5 +25,8 @@ public:
 	//Need to initialize two lists to manage nodes:
 	//Open List - Storing nodes that are potential candiates to be explored. std:set or std:priority_queue are efficient for finding node with lowest fCost
 	//Closed List - Stores nodes that have already been fully explored to prevent redundant processing
+
+	//Perhaps Player broadcasts their coordinates at all times, the Tiles then can use that information to allocate the scores
+	//The Minotaur will then use the scores provided by the tiles in order to pathfind towards the player
 };
 

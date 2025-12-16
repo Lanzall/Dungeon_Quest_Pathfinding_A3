@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\JMC_SDLStarter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:JMC_SDLStarter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\DungeonGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:DungeonGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,32 +15,20 @@
       "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:DungeonGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Tile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Minotaur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\JMC_SDLStarter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:JMC_SDLStarter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Tile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Minotaur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Minotaur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Enums.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Enums.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\GameCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -47,8 +39,16 @@
       "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:GameCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Enums.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Enums.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Minotaur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Minotaur.cpp",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.cpp",
               "RelativeDocumentMoniker": "Minotaur.cpp",
@@ -70,11 +70,12 @@
               "RelativeToolTip": "Minotaur.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-09T00:50:18.121Z"
+              "WhenOpened": "2025-12-09T00:50:18.121Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "Minotaur.h",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.h",
               "RelativeDocumentMoniker": "Minotaur.h",
@@ -82,36 +83,38 @@
               "RelativeToolTip": "Minotaur.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-09T00:41:37.345Z"
+              "WhenOpened": "2025-12-09T00:41:37.345Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Tile.cpp",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.cpp",
               "RelativeDocumentMoniker": "Tile.cpp",
               "ToolTip": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.cpp",
               "RelativeToolTip": "Tile.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAACJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-19T02:08:50.692Z"
+              "WhenOpened": "2025-11-19T02:08:50.692Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Tile.h",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.h",
               "RelativeDocumentMoniker": "Tile.h",
               "ToolTip": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.h",
               "RelativeToolTip": "Tile.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-08T22:53:19.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "Enums.h",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Enums.h",
               "RelativeDocumentMoniker": "Enums.h",
@@ -119,11 +122,12 @@
               "RelativeToolTip": "Enums.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-08T22:31:59.773Z"
+              "WhenOpened": "2025-12-08T22:31:59.773Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "GameCharacter.cpp",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\GameCharacter.cpp",
               "RelativeDocumentMoniker": "GameCharacter.cpp",
@@ -131,11 +135,12 @@
               "RelativeToolTip": "GameCharacter.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-19T04:24:11.502Z"
+              "WhenOpened": "2025-11-19T04:24:11.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "GameCharacter.h",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\GameCharacter.h",
               "RelativeDocumentMoniker": "GameCharacter.h",
@@ -143,11 +148,12 @@
               "RelativeToolTip": "GameCharacter.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-19T03:25:40.068Z"
+              "WhenOpened": "2025-11-19T03:25:40.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.h",
               "RelativeDocumentMoniker": "Player.h",
@@ -160,20 +166,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.cpp",
               "RelativeDocumentMoniker": "Player.cpp",
               "ToolTip": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.cpp",
               "RelativeToolTip": "Player.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-19T02:08:49.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DungeonGame.h",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\DungeonGame.h",
               "RelativeDocumentMoniker": "DungeonGame.h",
@@ -186,28 +192,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DungeonGame.cpp",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\DungeonGame.cpp",
               "RelativeDocumentMoniker": "DungeonGame.cpp",
               "ToolTip": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\DungeonGame.cpp",
               "RelativeToolTip": "DungeonGame.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAACcAAACoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-19T02:08:38.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "JMC_SDLStarter.cpp",
               "DocumentMoniker": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\JMC_SDLStarter.cpp",
               "RelativeDocumentMoniker": "JMC_SDLStarter.cpp",
               "ToolTip": "C:\\Users\\bscard1\\Workspace\\AGA307\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\JMC_SDLStarter.cpp",
               "RelativeToolTip": "JMC_SDLStarter.cpp",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAHQAAAB1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAB1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-19T02:08:47.646Z"
+              "WhenOpened": "2025-11-19T02:08:47.646Z",
+              "EditorCaption": ""
             }
           ]
         }
