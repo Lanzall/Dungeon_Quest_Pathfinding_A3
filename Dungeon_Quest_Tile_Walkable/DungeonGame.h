@@ -6,6 +6,9 @@
 #include "Player.h"
 #include "Minotaur.h"
 #include "Tile.h"
+#include <iostream>
+#include <cmath>
+#include <list>
 
 const static std::string path_Hero = "Textures/Hero_sword.png";
 const static std::string path_Boss = "Textures/Minotaur.png";
@@ -26,6 +29,14 @@ public:
 	void Update(float DeltaTime);		// Delta time in seconds (e.g. 0.016f for 60fps)
 	float TimeSinceLastPrint = 0.0f;		//The time since the last print to console, accumulates delta time
 	const float PrintInterval = 1.0f;		//Interval of 1 second between prints to console
+
+	//Pathfinding functions
+	void GetCurrentTiles();		//Grabs the current tiles that the Hero and Boss are on
+	int TaxicabDistance(int x1, int y1, int x2, int y2);		//Calculates the taxicab distance between two points
+	void AStarPathfinding();
+	Tile* HeroCurrentTile;
+	Tile* BossCurrentTile;
+	Tile* StartTile;
 
 	void LoadTextures(SDL_Renderer* renderer);
 	Player* Hero;

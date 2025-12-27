@@ -10,6 +10,6 @@ public:
     void SetLocation();
     void StartLocation();
 	void PrintBossCoordinates();
-	Tile* CurrentTile;      // Pointer to the tile the Minotaur is currently on
+	Tile* BossCurrentTile;      // Pointer to the tile the Minotaur is currently on
 };
 

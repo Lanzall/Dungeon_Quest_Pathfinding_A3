@@ -28,6 +28,21 @@ void DungeonGame::Update(float DeltaTime)
 	}
 }
 
+void DungeonGame::GetCurrentTiles()		//Grabs the current tiles that the Hero and Boss are on
+{
+	HeroCurrentTile = &Tiles[Hero->CoordinateX][Hero->CoordinateY];
+	BossCurrentTile = &Tiles[Boss->CoordinateX][Boss->CoordinateY];
+}
+
+int DungeonGame::TaxicabDistance(int x1, int y1, int x2, int y2)		//Calculates the taxicab distance between the two points, not including diagonals
+{
+	return std::abs(x1 - x2) + std::abs(y1 - y2);
+}
+
+void DungeonGame::AStarPathfinding()
+{
+}
+
 void DungeonGame::LoadTextures(SDL_Renderer* renderer)
 {
 	this->Hero = new Player;

@@ -12,5 +12,6 @@ class Player :
       void Setlocation();
       void StartLocation();
       void PrintCoordinates();
+	  Tile* HeroCurrentTile;      // Pointer to the tile the Player is currently on
 };
 
