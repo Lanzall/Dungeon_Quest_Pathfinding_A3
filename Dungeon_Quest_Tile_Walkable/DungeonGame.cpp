@@ -14,6 +14,16 @@ DungeonGame::~DungeonGame()
 
 void DungeonGame::Update(float DeltaTime)
 {
+	TimeSinceLastPrint += DeltaTime;	// Accumulate delta time
+
+	//Check if 1 second or more has passed
+	if (TimeSinceLastPrint >= PrintInterval)
+	{
+		//Print the player's coordinates to the console
+		Hero->PrintCoordinates();
+		//Reset the timer
+		TimeSinceLastPrint = 0.0f;
+	}
 }
 
 void DungeonGame::LoadTextures(SDL_Renderer* renderer)

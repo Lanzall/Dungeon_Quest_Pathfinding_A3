@@ -33,4 +33,9 @@ void Player::StartLocation()
 	CoordinateY = 1;
 }
 
+void Player::PrintCoordinates()
+{
+	std::cout << "Player Coordinates are: \nX: " << CoordinateX << "\nY: " << CoordinateY << std::endl;		// Prints the players coordinates to the terminal using the CoordinateX and CoordinateY variables
+}
+
 //Write a script to print the Players coordinates to the terminal.

@@ -11,5 +11,6 @@ class Player :
       void MoveRight();
       void Setlocation();
       void StartLocation();
+      void PrintCoordinates();
 };
 
