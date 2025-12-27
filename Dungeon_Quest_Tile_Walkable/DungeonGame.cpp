@@ -14,6 +14,7 @@ DungeonGame::~DungeonGame()
 
 void DungeonGame::Update(float DeltaTime)
 {
+	//Printing to console functions
 	TimeSinceLastPrint += DeltaTime;	// Accumulate delta time
 
 	//Check if 1 second or more has passed
@@ -23,6 +24,8 @@ void DungeonGame::Update(float DeltaTime)
 		Hero->PrintCoordinates();
 		//Print the Minotaur's coordinates to the console
 		Boss->PrintBossCoordinates();
+		//Print the taxicab distance between the Hero and the Boss
+		std::cout << "Taxicab Distance between Hero and Minotaur: " << TaxicabDistance(Hero->CoordinateX, Hero->CoordinateY, Boss->CoordinateX, Boss->CoordinateY) << std::endl;
 		//Reset the timer
 		TimeSinceLastPrint = 0.0f;
 	}
@@ -41,6 +44,12 @@ int DungeonGame::TaxicabDistance(int x1, int y1, int x2, int y2)		//Calculates t
 
 void DungeonGame::AStarPathfinding()
 {
+	std::list<Tile*> OpenTiles;		//Tiles to be evaluated
+	std::list<Tile*> ClosedTiles;	//Tiles already evaluated
+
+	StartTile = BossCurrentTile;	//Starting tile is where the Boss currently is
+	StartTile->fCost = 0;	//Starting tile has no cost to reach itself
+	OpenTiles.push_front(StartTile);	//Add starting tile to open list
 }
 
 void DungeonGame::LoadTextures(SDL_Renderer* renderer)
