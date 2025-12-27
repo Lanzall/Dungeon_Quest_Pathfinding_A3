@@ -12,11 +12,20 @@ public:
 	int TileTrackerY;
 	void SetCoordinate(float Tilex, float Tiley);
 	void GetNeighbour(float current, float dir);
+	Tile* NorthNeighbour;
+	Tile* EastNeighbour;
+	Tile* SouthNeighbour;
+	Tile* WestNeighbour;
 
 	//Using floats instead of ints for the Pathfinding costs to allow weighting the heuristic at 1.5 as Minecraft does for faster pathfinding if obstacles are present
 	float gCost;
 	float hCost;
 	float fCost;
+
+	bool InOpenList;
+	bool InClosedList;
+
+	float PredictedFCost();	//Used to store predicted fCost for nodes not yet in open list
 
 
 	/*struct Node		//Defining the Node Structure within the grid system (HOW DO I DO THIS?)

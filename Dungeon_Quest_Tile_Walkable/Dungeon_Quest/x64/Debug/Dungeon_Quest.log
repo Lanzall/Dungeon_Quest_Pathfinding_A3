@@ -1,6 +1,9 @@
 ﻿  DungeonGame.cpp
-C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(99,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(99,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(100,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(100,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(178,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(178,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(179,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\DungeonGame.cpp(179,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  JMC_SDLStarter.cpp
+C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\JMC_SDLStarter.cpp(96,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
   Dungeon_Quest.vcxproj -> C:\Users\Administrator\Documents\JMC\TRIMESTER 5\Game Development 2\Dungeon_Quest_Pathfinding_A3\Dungeon_Quest_Tile_Walkable\x64\Debug\Dungeon_Quest.exe

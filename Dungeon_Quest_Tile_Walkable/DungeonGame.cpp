@@ -24,11 +24,55 @@ void DungeonGame::Update(float DeltaTime)
 		Hero->PrintCoordinates();
 		//Print the Minotaur's coordinates to the console
 		Boss->PrintBossCoordinates();
+		//Print the tiles around the Boss with their costs
+		PrintTilesAroundBoss();
 		//Print the taxicab distance between the Hero and the Boss
 		std::cout << "Taxicab Distance between Hero and Minotaur: " << TaxicabDistance(Hero->CoordinateX, Hero->CoordinateY, Boss->CoordinateX, Boss->CoordinateY) << std::endl;
 		//Reset the timer
 		TimeSinceLastPrint = 0.0f;
 	}
+}
+
+void DungeonGame::PrintTilesAroundBoss()
+{
+	// safety checks
+	if (Boss == nullptr)
+	{
+		return;
+	}
+
+	// Ensure current tile references and heuristic costs are up-to-date
+	GetCurrentTiles();
+	SetHCosts();
+
+	int bx = Boss->CoordinateX;
+	int by = Boss->CoordinateY;
+
+	auto printTileAt = [&](const char* name, int x, int y)
+	{
+		if (x >= 0 && x < RoomSize && y >= 0 && y < RoomSize)
+		{
+			Tile& tile = Tiles[x][y];
+			std::cout << name << " (" << x << "," << y << ")"
+				<< " g: " << tile.gCost
+				<< " h: " << tile.hCost
+				<< " f: " << tile.fCost
+				<< std::endl;
+		}
+		else
+		{
+			std::cout << name << " out of bounds\n";
+		}
+	};
+
+	printTileAt("Current", bx, by);
+	printTileAt("North", bx, by - 1);
+	printTileAt("East",  bx + 1, by);
+	printTileAt("South", bx, by + 1);
+	printTileAt("West",  bx - 1, by);
+
+	//SetHCosts() is called before this function to ensure hCosts are current
+	//Uses the bosses coordinates directly to index Tiles instead of relying on internal tile coordinates
 }
 
 void DungeonGame::GetCurrentTiles()		//Grabs the current tiles that the Hero and Boss are on
@@ -50,6 +94,44 @@ void DungeonGame::AStarPathfinding()
 	StartTile = BossCurrentTile;	//Starting tile is where the Boss currently is
 	StartTile->fCost = 0;	//Starting tile has no cost to reach itself
 	OpenTiles.push_front(StartTile);	//Add starting tile to open list
+	StartTile->InOpenList = true;	//Mark starting tile as in open list
+}
+
+void DungeonGame::SetHCosts()
+{
+	//Hero's current coordinates are the target for the Minotaur
+	int targetX = Hero->CoordinateX;
+	int targetY = Hero->CoordinateY;
+
+	//Iterate through all tiles in the room to set their hCosts
+	for (int x = 0; x < RoomSize; x++)
+	{
+		for (int y = 0; y < RoomSize; y++)
+		{
+			Tile& tile = Tiles[x][y];
+			//Calculate the hCost using taxicab distance
+			tile.hCost = static_cast<float>(TaxicabDistance(x, y, targetX, targetY));
+		}
+	}
+}
+
+void DungeonGame::LowestFCostTile(Tile* Current)
+{
+	//This function will find the tile in the open list with the lowest fCost
+	Tile* NearestTile[]{ Current->NorthNeighbour, Current->EastNeighbour, Current->SouthNeighbour, Current->WestNeighbour };		//Array of pointers to neighbouring tiles
+	Tile* LowestTile = nullptr;		//Pointer to the tile with the lowest fCost found so far
+
+	for (Tile* Neighbour : NearestTile)
+	{
+		if (Neighbour != nullptr && Neighbour->InOpenList)	//Check if the neighbour exists and is in the open list
+		{
+			if (LowestTile == nullptr || Neighbour->fCost < LowestTile->fCost)	//If no lowest tile yet or this neighbour has a lower fCost
+			{
+				LowestTile = Neighbour;	//Update the lowest tile
+			}
+		}
+	}
+
 }
 
 void DungeonGame::LoadTextures(SDL_Renderer* renderer)
@@ -114,4 +196,6 @@ void DungeonGame::MovePlayer(Direction dir)
 		Hero->MoveDown();
 	if (dir == Direction::West && Tiles[Hero->CoordinateX - 1][Hero->CoordinateY].Walkable)
 		Hero->MoveLeft();
+
+	SetHCosts();	//Update hCosts after player moves
 }

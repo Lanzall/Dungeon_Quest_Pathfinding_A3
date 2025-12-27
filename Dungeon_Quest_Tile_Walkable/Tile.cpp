@@ -50,3 +50,10 @@ void Tile::SetCoordinate(float Tilex, float Tiley)
 void Tile::GetNeighbour(float current, float dir)
 {
 }
+
+float Tile::PredictedFCost()		//Used to store predicted fCost for nodes not yet in open list
+{
+	return gCost + (1.5f * hCost);		//Weighting the heuristic cost by 1.5 to allow for faster pathfinding around obstacles
+}
+
+

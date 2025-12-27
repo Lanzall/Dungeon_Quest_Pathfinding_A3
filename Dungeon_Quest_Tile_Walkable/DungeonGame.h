@@ -29,6 +29,7 @@ public:
 	void Update(float DeltaTime);		// Delta time in seconds (e.g. 0.016f for 60fps)
 	float TimeSinceLastPrint = 0.0f;		//The time since the last print to console, accumulates delta time
 	const float PrintInterval = 1.0f;		//Interval of 1 second between prints to console
+	void PrintTilesAroundBoss();
 
 	//Pathfinding functions
 	void GetCurrentTiles();		//Grabs the current tiles that the Hero and Boss are on
@@ -37,6 +38,8 @@ public:
 	Tile* HeroCurrentTile;
 	Tile* BossCurrentTile;
 	Tile* StartTile;
+	void SetHCosts();		//Sets the hCosts for all tiles based on distance to Hero
+	void LowestFCostTile(Tile* Current);	//Finds the tile in the open list with the lowest fCost
 
 	void LoadTextures(SDL_Renderer* renderer);
 	Player* Hero;
