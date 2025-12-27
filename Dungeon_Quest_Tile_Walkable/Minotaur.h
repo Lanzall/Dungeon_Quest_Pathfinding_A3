@@ -9,5 +9,7 @@ class Minotaur :
 public:
     void SetLocation();
     void StartLocation();
+	void PrintBossCoordinates();
+	Tile* CurrentTile;      // Pointer to the tile the Minotaur is currently on
 };
 

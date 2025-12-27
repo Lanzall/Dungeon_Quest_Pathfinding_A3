@@ -13,6 +13,12 @@ public:
 	void SetCoordinate(float Tilex, float Tiley);
 	void GetNeighbour(float current, float dir);
 
+	//Using floats instead of ints for the Pathfinding costs to allow weighting the heuristic at 1.5 as Minecraft does for faster pathfinding if obstacles are present
+	float gCost;
+	float hCost;
+	float fCost;
+
+
 	/*struct Node		//Defining the Node Structure within the grid system (HOW DO I DO THIS?)
 	* I want to be able to define the node structure to represent each point on the grid
 	* Should contain coordinates, cost variables, a way to track its parent node for path reconstruction

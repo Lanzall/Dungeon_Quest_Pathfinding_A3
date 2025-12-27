@@ -21,6 +21,8 @@ void DungeonGame::Update(float DeltaTime)
 	{
 		//Print the player's coordinates to the console
 		Hero->PrintCoordinates();
+		//Print the Minotaur's coordinates to the console
+		Boss->PrintBossCoordinates();
 		//Reset the timer
 		TimeSinceLastPrint = 0.0f;
 	}
