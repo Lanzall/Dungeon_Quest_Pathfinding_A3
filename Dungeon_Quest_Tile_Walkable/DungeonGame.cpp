@@ -17,6 +17,7 @@ DungeonGame::~DungeonGame()
 
 void DungeonGame::Update(float DeltaTime)
 {
+	/*  Printing coords and other info once per second
 	//Printing to console functions
 	TimeSinceLastPrint += DeltaTime;	// Accumulate delta time
 
@@ -33,7 +34,11 @@ void DungeonGame::Update(float DeltaTime)
 		std::cout << "Taxicab Distance between Hero and Minotaur: " << TaxicabDistance(Hero->CoordinateX, Hero->CoordinateY, Boss->CoordinateX, Boss->CoordinateY) << std::endl;
 		//Reset the timer
 		TimeSinceLastPrint = 0.0f;
-	}
+	}*/
+
+	//Runs the A* pathfinding each frame (TEST)
+	AStarPathfinding();
+
 }
 
 void DungeonGame::PrintTilesAroundBoss()
@@ -106,13 +111,6 @@ void DungeonGame::AStarPathfinding()
 		return;
 	}
 
-	/*std::list<Tile*> OpenTiles;		//Tiles to be evaluated
-	std::list<Tile*> ClosedTiles;	//Tiles already evaluated
-
-	StartTile->fCost = 0;	//Starting tile has no cost to reach itself
-	OpenTiles.push_front(StartTile);	//Add starting tile to open list
-	StartTile->InOpenList = true;	//Mark starting tile as in open list*/
-
 	//Reset pathfinding state on all tiles
 	for (int x = 0; x < RoomSize; ++x)
 	{
@@ -131,9 +129,7 @@ void DungeonGame::AStarPathfinding()
 	Tile* targetTile = HeroCurrentTile;
 
 	startTile->gCost = 0;
-	//fCost = gCost + (1.5 x hCost)  I think my order of opperations may be incorrect and you could just write it as "startTile->fCost = startTile->gCost + 1.5 * startTile->hCost;"
-	//But to be safe I will add the brackets
-	startTile->fCost = startTile->gCost + (1.5 * startTile->hCost);		//Set starting tile fCost
+	startTile->fCost = startTile->gCost + startTile->hCost;		//Set starting tile fCost
 	std::list<Tile*> OpenTiles;		//Tiles to be evaluated
 	std::list<Tile*> ClosedTiles;	//Tiles already evaluated
 	OpenTiles.push_back(startTile);		//Add starting tile to open list
@@ -179,7 +175,7 @@ void DungeonGame::AStarPathfinding()
 					//Discover a new node
 					neighbour->ParentTile = currentTile;
 					neighbour->gCost = tentativeGCost;
-					neighbour->fCost = neighbour->gCost + (1.5f * neighbour->hCost);		//Update fCost with weighted heuristic
+					neighbour->fCost = neighbour->gCost + neighbour->hCost;		//Update fCost with weighted heuristic
 					OpenTiles.push_back(neighbour);
 					neighbour->InOpenList = true;
 				}
@@ -188,18 +184,41 @@ void DungeonGame::AStarPathfinding()
 					//This path to neighbour is better than previous one
 					neighbour->ParentTile = currentTile;
 					neighbour->gCost = tentativeGCost;
-					neighbour->fCost = neighbour->gCost + (1.5f * neighbour->hCost);		//Update fCost with weighted heuristic
+					neighbour->fCost = neighbour->gCost + neighbour->hCost;		//Update fCost with weighted heuristic
 				}
 			}
 		}
 
-		//If didn't reach the target, there was no path found
-		if (targetTile->ParentTile == nullptr && targetTile != startTile)
+		//After search completes, check if target was reached
+		if (targetTile != startTile && targetTile->ParentTile == nullptr)
 		{
-			//No path - do nothing
+			//No path found to target
 			return;
 		}
-		//Reconstruct path from target to start goes here (not implemented yet)
+
+		//Reconstruct path from target to start
+		std::vector<Tile*> path;	//Vector to store the path
+		Tile* pathTile = targetTile;	//Start from target tile
+		//Follow parent tiles back to start
+		while (pathTile != nullptr)
+		{
+			path.push_back(pathTile);
+			pathTile = pathTile->ParentTile;
+		}
+		std::reverse(path.begin(), path.end());	//Reverse the path to get it from start to target, now path[0] is start, last is target
+
+		//Move the Minotaur one tile along the path if possible
+		if (path.size() >= 2)
+		{
+			Tile* nextTile = path[1];	//Tile immediately after start tile
+			//Update Minotaur's position to next tile
+			Boss->CoordinateX = nextTile->TileTrackerX;
+			Boss->CoordinateY = nextTile->TileTrackerY;
+			//Update boss location rect (for rendering)
+			Boss->SetLocation();
+			//Update BossCurrentTile pointer
+			GetCurrentTiles();
+		}
 	}
 }
 

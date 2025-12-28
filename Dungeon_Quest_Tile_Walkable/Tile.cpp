@@ -53,7 +53,7 @@ void Tile::GetNeighbour(float current, float dir)
 
 float Tile::PredictedFCost()		//Used to store predicted fCost for nodes not yet in open list
 {
-	return gCost + (1.5f * hCost);		//Weighting the heuristic cost by 1.5 to allow for faster pathfinding around obstacles
+	return gCost + hCost;		//Removed Weighting since it caused issues in the calculations gave numbers like 3000e and whatnot
 }
 
 

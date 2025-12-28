@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:DungeonGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\DungeonGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:DungeonGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\GameCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:GameCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Tile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\DungeonGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:DungeonGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\GameCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:GameCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\GameCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B546AFF7-5591-41CE-9996-29E327BE0C77}|Dungeon_Quest.vcxproj|solutionrelative:GameCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +62,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Minotaur.cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.cpp",
               "RelativeDocumentMoniker": "Minotaur.cpp",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Minotaur.h",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Minotaur.h",
               "RelativeDocumentMoniker": "Minotaur.h",
@@ -92,26 +92,27 @@
               "RelativeDocumentMoniker": "Tile.cpp",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.cpp",
               "RelativeToolTip": "Tile.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADUAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-19T02:08:50.692Z"
+              "WhenOpened": "2025-11-19T02:08:50.692Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Tile.h",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.h",
               "RelativeDocumentMoniker": "Tile.h",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Tile.h",
               "RelativeToolTip": "Tile.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-08T22:53:19.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Enums.h",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Enums.h",
               "RelativeDocumentMoniker": "Enums.h",
@@ -123,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "GameCharacter.cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\GameCharacter.cpp",
               "RelativeDocumentMoniker": "GameCharacter.cpp",
@@ -131,11 +132,12 @@
               "RelativeToolTip": "GameCharacter.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-19T04:24:11.502Z"
+              "WhenOpened": "2025-11-19T04:24:11.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "GameCharacter.h",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\GameCharacter.h",
               "RelativeDocumentMoniker": "GameCharacter.h",
@@ -147,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.h",
               "RelativeDocumentMoniker": "Player.h",
@@ -159,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\Player.cpp",
               "RelativeDocumentMoniker": "Player.cpp",
@@ -167,11 +169,12 @@
               "RelativeToolTip": "Player.cpp",
               "ViewState": "AgIAAAwAAAAAAAAAAAAEwCMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-19T02:08:49.873Z"
+              "WhenOpened": "2025-11-19T02:08:49.873Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "DungeonGame.h",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\DungeonGame.h",
               "RelativeDocumentMoniker": "DungeonGame.h",
@@ -179,8 +182,7 @@
               "RelativeToolTip": "DungeonGame.h",
               "ViewState": "AgIAABcAAAAAAAAAAAAEwC4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-19T02:13:52.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-19T02:13:52.719Z"
             },
             {
               "$type": "Document",
@@ -190,14 +192,14 @@
               "RelativeDocumentMoniker": "DungeonGame.cpp",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\DungeonGame.cpp",
               "RelativeToolTip": "DungeonGame.cpp",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAUwNMAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAACgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-19T02:08:38.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "JMC_SDLStarter.cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\JMC\\TRIMESTER 5\\Game Development 2\\Dungeon_Quest_Pathfinding_A3\\Dungeon_Quest_Tile_Walkable\\JMC_SDLStarter.cpp",
               "RelativeDocumentMoniker": "JMC_SDLStarter.cpp",
