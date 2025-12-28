@@ -1,5 +1,8 @@
 #include "DungeonGame.h"
 #include <SDL3/SDL.h>
+#include <vector>
+#include <limits>
+#include <algorithm>
 DungeonGame::DungeonGame(float tileSizeX, float tileSizeY)
 {
 	this->tileSizeX = tileSizeX;
@@ -88,13 +91,116 @@ int DungeonGame::TaxicabDistance(int x1, int y1, int x2, int y2)		//Calculates t
 
 void DungeonGame::AStarPathfinding()
 {
-	std::list<Tile*> OpenTiles;		//Tiles to be evaluated
+	//Basic Safety
+	if (Boss == nullptr || Hero == nullptr)
+	{
+		return;
+	}
+
+	//Ensure tiles and heuristic costs are up-to-date
+	GetCurrentTiles();
+	SetHCosts();
+
+	if (BossCurrentTile == nullptr || HeroCurrentTile == nullptr)
+	{
+		return;
+	}
+
+	/*std::list<Tile*> OpenTiles;		//Tiles to be evaluated
 	std::list<Tile*> ClosedTiles;	//Tiles already evaluated
 
-	StartTile = BossCurrentTile;	//Starting tile is where the Boss currently is
 	StartTile->fCost = 0;	//Starting tile has no cost to reach itself
 	OpenTiles.push_front(StartTile);	//Add starting tile to open list
-	StartTile->InOpenList = true;	//Mark starting tile as in open list
+	StartTile->InOpenList = true;	//Mark starting tile as in open list*/
+
+	//Reset pathfinding state on all tiles
+	for (int x = 0; x < RoomSize; ++x)
+	{
+		for (int y = 0; y < RoomSize; ++y)
+		{
+			Tile& t = Tiles[x][y];
+			t.gCost = std::numeric_limits<float>::max();
+			t.fCost = std::numeric_limits<float>::max();
+			t.InOpenList = false;
+			t.InClosedList = false;
+			t.ParentTile = nullptr;
+		}
+	}
+
+	Tile* startTile = BossCurrentTile;
+	Tile* targetTile = HeroCurrentTile;
+
+	startTile->gCost = 0;
+	//fCost = gCost + (1.5 x hCost)  I think my order of opperations may be incorrect and you could just write it as "startTile->fCost = startTile->gCost + 1.5 * startTile->hCost;"
+	//But to be safe I will add the brackets
+	startTile->fCost = startTile->gCost + (1.5 * startTile->hCost);		//Set starting tile fCost
+	std::list<Tile*> OpenTiles;		//Tiles to be evaluated
+	std::list<Tile*> ClosedTiles;	//Tiles already evaluated
+	OpenTiles.push_back(startTile);		//Add starting tile to open list
+	startTile->InOpenList = true;	//Mark starting tile as in open list
+
+	Tile* currentTile = nullptr;	//Pointer to the current tile being evaluated
+
+	while (!OpenTiles.empty())
+	{
+		//Find node in open list with lowest fCost (tie-breaker on the hCost)
+		currentTile = *std::min_element(OpenTiles.begin(), OpenTiles.end(), [](Tile* a, Tile* b)
+			{
+				if (a->fCost == b->fCost)
+				{
+					return a->hCost < b->hCost;	//Tie-breaker on hCost
+				}
+				return a->fCost < b->fCost;
+			});
+
+		//If target is reached, stop
+		if (currentTile == targetTile)
+		{
+			break;		//Path found
+		}
+
+		//Remove current tile from open list and add to closed list
+		OpenTiles.remove(currentTile);
+		currentTile->InOpenList = false;
+		currentTile->InClosedList = true;
+
+		//Check neighbours
+		Tile* neighbours[4] = { currentTile->NorthNeighbour, currentTile->EastNeighbour, currentTile->SouthNeighbour, currentTile->WestNeighbour };
+		for (Tile* neighbour : neighbours)
+		{
+			if (neighbour == nullptr || !neighbour->Walkable || neighbour->InClosedList)	//Check if neighbour exists, is walkable, and not already evaluated
+			{
+				continue;	//Skip if null, not walkable, or already evaluated
+
+				float tentativeGCost = currentTile->gCost + 1.0f; // uniform cost between adjacent tiles, tentative means it's a potential cost
+
+				if (!neighbour->InOpenList)
+				{
+					//Discover a new node
+					neighbour->ParentTile = currentTile;
+					neighbour->gCost = tentativeGCost;
+					neighbour->fCost = neighbour->gCost + (1.5f * neighbour->hCost);		//Update fCost with weighted heuristic
+					OpenTiles.push_back(neighbour);
+					neighbour->InOpenList = true;
+				}
+				else if (tentativeGCost < neighbour->gCost)
+				{
+					//This path to neighbour is better than previous one
+					neighbour->ParentTile = currentTile;
+					neighbour->gCost = tentativeGCost;
+					neighbour->fCost = neighbour->gCost + (1.5f * neighbour->hCost);		//Update fCost with weighted heuristic
+				}
+			}
+		}
+
+		//If didn't reach the target, there was no path found
+		if (targetTile->ParentTile == nullptr && targetTile != startTile)
+		{
+			//No path - do nothing
+			return;
+		}
+		//Reconstruct path from target to start goes here (not implemented yet)
+	}
 }
 
 void DungeonGame::SetHCosts()
