@@ -184,6 +184,32 @@ void DungeonGame::LoadRoom(const char* file)// parse the BMP file into here - su
 			//Get the neighbouring tiles here
 		};
 	}
+
+	//After all tiles are created, wire up the neighbours and initialize pathfinding fields
+	for (int x = 0; x < RoomSize; x++)
+	{
+		for (int y = 0; y < RoomSize; ++y)
+		{
+			Tile& t = Tiles[x][y];
+			t.NorthNeighbour = (y > 0) ? &Tiles[x][y - 1] : nullptr;
+			t.EastNeighbour = (x < RoomSize - 1) ? &Tiles[x + 1][y] : nullptr;
+			t.SouthNeighbour = (y < RoomSize - 1) ? &Tiles[x][y + 1] : nullptr;
+			t.WestNeighbour = (x > 0) ? &Tiles[x - 1][y] : nullptr;
+
+			t.gCost = std::numeric_limits<float>::max();
+			t.hCost = 0.0f;		//Will be set by SetHCosts()
+			t.fCost = std::numeric_limits<float>::max();
+			t.InOpenList = false;
+			t.InClosedList = false;
+			t.ParentTile = nullptr;
+		}
+	}
+
+	//Set the heuristics now that the Hero location was set
+	SetHCosts();
+
+	//Update current tile pointers (the boss and player start locations were set earlier)
+	GetCurrentTiles();
 }
 
 void DungeonGame::MovePlayer(Direction dir)
