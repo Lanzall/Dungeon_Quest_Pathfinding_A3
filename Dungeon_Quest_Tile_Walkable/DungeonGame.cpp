@@ -17,11 +17,10 @@ DungeonGame::~DungeonGame()
 
 void DungeonGame::Update(float DeltaTime)
 {
-	/*  Printing coords and other info once per second
 	//Printing to console functions
 	TimeSinceLastPrint += DeltaTime;	// Accumulate delta time
 
-	//Check if 1 second or more has passed
+	//Check if .5 second or more has passed
 	if (TimeSinceLastPrint >= PrintInterval)
 	{
 		//Print the player's coordinates to the console
@@ -32,13 +31,13 @@ void DungeonGame::Update(float DeltaTime)
 		PrintTilesAroundBoss();
 		//Print the taxicab distance between the Hero and the Boss
 		std::cout << "Taxicab Distance between Hero and Minotaur: " << TaxicabDistance(Hero->CoordinateX, Hero->CoordinateY, Boss->CoordinateX, Boss->CoordinateY) << std::endl;
+		
+		//Runs the A* pathfinding
+		AStarPathfinding();
+
 		//Reset the timer
 		TimeSinceLastPrint = 0.0f;
-	}*/
-
-	//Runs the A* pathfinding each frame (TEST)
-	AStarPathfinding();
-
+	}
 }
 
 void DungeonGame::PrintTilesAroundBoss()
@@ -96,22 +95,20 @@ int DungeonGame::TaxicabDistance(int x1, int y1, int x2, int y2)		//Calculates t
 
 void DungeonGame::AStarPathfinding()
 {
-	//Basic Safety
+	// Basic safety
 	if (Boss == nullptr || Hero == nullptr)
-	{
 		return;
-	}
 
-	//Ensure tiles and heuristic costs are up-to-date
+	// Ensure tiles and heuristic costs are up-to-date
 	GetCurrentTiles();
 	SetHCosts();
 
 	if (BossCurrentTile == nullptr || HeroCurrentTile == nullptr)
-	{
 		return;
-	}
 
-	//Reset pathfinding state on all tiles
+	const bool debug = true; // set false to silence logs
+
+	// Reset pathfinding state on all tiles
 	for (int x = 0; x < RoomSize; ++x)
 	{
 		for (int y = 0; y < RoomSize; ++y)
@@ -128,97 +125,132 @@ void DungeonGame::AStarPathfinding()
 	Tile* startTile = BossCurrentTile;
 	Tile* targetTile = HeroCurrentTile;
 
-	startTile->gCost = 0;
-	startTile->fCost = startTile->gCost + startTile->hCost;		//Set starting tile fCost
-	std::list<Tile*> OpenTiles;		//Tiles to be evaluated
-	std::list<Tile*> ClosedTiles;	//Tiles already evaluated
-	OpenTiles.push_back(startTile);		//Add starting tile to open list
-	startTile->InOpenList = true;	//Mark starting tile as in open list
+	startTile->gCost = 0.0f;
+	startTile->fCost = startTile->gCost + startTile->hCost; // starting tile fCost
+	std::list<Tile*> OpenTiles; // tiles to be evaluated
+	OpenTiles.push_back(startTile);
+	startTile->InOpenList = true;
 
-	Tile* currentTile = nullptr;	//Pointer to the current tile being evaluated
+	Tile* currentTile = nullptr;
 
 	while (!OpenTiles.empty())
 	{
-		//Find node in open list with lowest fCost (tie-breaker on the hCost)
+		// find node in open list with lowest fCost (tie-breaker on the hCost)
 		currentTile = *std::min_element(OpenTiles.begin(), OpenTiles.end(), [](Tile* a, Tile* b)
-			{
-				if (a->fCost == b->fCost)
-				{
-					return a->hCost < b->hCost;	//Tie-breaker on hCost
-				}
-				return a->fCost < b->fCost;
-			});
-
-		//If target is reached, stop
-		if (currentTile == targetTile)
 		{
-			break;		//Path found
+			if (a->fCost == b->fCost) return a->hCost < b->hCost;
+			return a->fCost < b->fCost;
+		});
+
+		if (debug)
+		{
+			std::cout << "A* select current: (" << currentTile->TileTrackerX << "," << currentTile->TileTrackerY
+				<< ") g:" << currentTile->gCost << " h:" << currentTile->hCost << " f:" << currentTile->fCost << std::endl;
 		}
 
-		//Remove current tile from open list and add to closed list
+		// if we reached target, stop searching
+		if (currentTile == targetTile)
+			break;
+
+		// move current from open to closed
 		OpenTiles.remove(currentTile);
 		currentTile->InOpenList = false;
 		currentTile->InClosedList = true;
 
-		//Check neighbours
+		if (debug)
+		{
+			std::cout << "A* closed: (" << currentTile->TileTrackerX << "," << currentTile->TileTrackerY << ")\n";
+		}
+
+		// visit neighbours
 		Tile* neighbours[4] = { currentTile->NorthNeighbour, currentTile->EastNeighbour, currentTile->SouthNeighbour, currentTile->WestNeighbour };
 		for (Tile* neighbour : neighbours)
 		{
-			if (neighbour == nullptr || !neighbour->Walkable || neighbour->InClosedList)	//Check if neighbour exists, is walkable, and not already evaluated
+			// skip invalid, unwalkable or already closed neighbours (log the reason)
+			if (neighbour == nullptr)
 			{
-				continue;	//Skip if null, not walkable, or already evaluated
+				if (debug) std::cout << "A* skip neighbour: null\n";
+				continue;
+			}
+			if (!neighbour->Walkable)
+			{
+				if (debug) std::cout << "A* skip neighbour: (" << neighbour->TileTrackerX << "," << neighbour->TileTrackerY << ") not walkable\n";
+				continue;
+			}
+			if (neighbour->InClosedList)
+			{
+				if (debug) std::cout << "A* skip neighbour: (" << neighbour->TileTrackerX << "," << neighbour->TileTrackerY << ") in closed\n";
+				continue;
+			}
 
-				float tentativeGCost = currentTile->gCost + 1.0f; // uniform cost between adjacent tiles, tentative means it's a potential cost
+			float tentativeGCost = currentTile->gCost + 1.0f; // uniform cost between adjacent tiles
 
-				if (!neighbour->InOpenList)
+			// discover or improve
+			if (!neighbour->InOpenList)
+			{
+				neighbour->ParentTile = currentTile;
+				neighbour->gCost = tentativeGCost;
+				neighbour->fCost = neighbour->gCost + neighbour->hCost;
+				OpenTiles.push_back(neighbour);
+				neighbour->InOpenList = true;
+
+				if (debug)
 				{
-					//Discover a new node
-					neighbour->ParentTile = currentTile;
-					neighbour->gCost = tentativeGCost;
-					neighbour->fCost = neighbour->gCost + neighbour->hCost;		//Update fCost with weighted heuristic
-					OpenTiles.push_back(neighbour);
-					neighbour->InOpenList = true;
+					std::cout << "A* open: (" << neighbour->TileTrackerX << "," << neighbour->TileTrackerY
+						<< ") g:" << neighbour->gCost << " h:" << neighbour->hCost << " f:" << neighbour->fCost << std::endl;
 				}
-				else if (tentativeGCost < neighbour->gCost)
+			}
+			else if (tentativeGCost < neighbour->gCost)
+			{
+				// better path found
+				neighbour->ParentTile = currentTile;
+				neighbour->gCost = tentativeGCost;
+				neighbour->fCost = neighbour->gCost + neighbour->hCost;
+
+				if (debug)
 				{
-					//This path to neighbour is better than previous one
-					neighbour->ParentTile = currentTile;
-					neighbour->gCost = tentativeGCost;
-					neighbour->fCost = neighbour->gCost + neighbour->hCost;		//Update fCost with weighted heuristic
+					std::cout << "A* better: (" << neighbour->TileTrackerX << "," << neighbour->TileTrackerY
+						<< ") new g:" << neighbour->gCost << " f:" << neighbour->fCost << std::endl;
 				}
 			}
 		}
+	} // end while open
 
-		//After search completes, check if target was reached
-		if (targetTile != startTile && targetTile->ParentTile == nullptr)
-		{
-			//No path found to target
-			return;
-		}
+	// after search finishes, check if target was reached
+	if (targetTile != startTile && targetTile->ParentTile == nullptr)
+	{
+		if (debug) std::cout << "A* result: no path to target\n";
+		return;
+	}
 
-		//Reconstruct path from target to start
-		std::vector<Tile*> path;	//Vector to store the path
-		Tile* pathTile = targetTile;	//Start from target tile
-		//Follow parent tiles back to start
-		while (pathTile != nullptr)
-		{
-			path.push_back(pathTile);
-			pathTile = pathTile->ParentTile;
-		}
-		std::reverse(path.begin(), path.end());	//Reverse the path to get it from start to target, now path[0] is start, last is target
+	// reconstruct path from target to start
+	std::vector<Tile*> path;
+	Tile* pathTile = targetTile;
+	while (pathTile != nullptr)
+	{
+		path.push_back(pathTile);
+		pathTile = pathTile->ParentTile;
+	}
+	std::reverse(path.begin(), path.end()); // path[0] == start
 
-		//Move the Minotaur one tile along the path if possible
-		if (path.size() >= 2)
-		{
-			Tile* nextTile = path[1];	//Tile immediately after start tile
-			//Update Minotaur's position to next tile
-			Boss->CoordinateX = nextTile->TileTrackerX;
-			Boss->CoordinateY = nextTile->TileTrackerY;
-			//Update boss location rect (for rendering)
-			Boss->SetLocation();
-			//Update BossCurrentTile pointer
-			GetCurrentTiles();
-		}
+	if (debug)
+	{
+		std::cout << "A* path: ";
+		for (auto t : path)
+			std::cout << "(" << t->TileTrackerX << "," << t->TileTrackerY << ") ";
+		std::cout << std::endl;
+	}
+
+	// move the Minotaur one tile along the path (if there's a next step)
+	if (path.size() >= 2)
+	{
+		Tile* nextTile = path[1];
+		Boss->CoordinateX = nextTile->TileTrackerX;
+		Boss->CoordinateY = nextTile->TileTrackerY;
+		Boss->SetLocation();
+		GetCurrentTiles(); // update cached pointers
+		if (debug)
+			std::cout << "A* move boss to: (" << Boss->CoordinateX << "," << Boss->CoordinateY << ")\n";
 	}
 }
 

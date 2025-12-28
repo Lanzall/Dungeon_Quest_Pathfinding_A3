@@ -28,7 +28,7 @@ public:
 
 	void Update(float DeltaTime);		// Delta time in seconds (e.g. 0.016f for 60fps)
 	float TimeSinceLastPrint = 0.0f;		//The time since the last print to console, accumulates delta time
-	const float PrintInterval = 1.0f;		//Interval of 1 second between prints to console
+	const float PrintInterval = 0.5f;		//Interval of half second between prints to console
 	void PrintTilesAroundBoss();
 
 	//Pathfinding functions
